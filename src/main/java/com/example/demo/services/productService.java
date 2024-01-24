@@ -31,7 +31,7 @@ public class productService {
 	}
 
 	public boolean deleteProduct(int id) {
-		return this.productDao.deletProduct(id);
+		return this.productDao.deleteProduct(id);
 	}
 
 

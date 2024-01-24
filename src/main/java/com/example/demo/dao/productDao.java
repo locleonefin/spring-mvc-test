@@ -40,7 +40,7 @@ public class productDao {
 	}
 
 	@Transactional
-	public Boolean deletProduct(int id) {
+	public Boolean deleteProduct(int id) {
 
 		Session session = this.sessionFactory.getCurrentSession();
 		Object persistanceInstance = session.load(Product.class, id);

@@ -4,6 +4,8 @@ import com.example.demo.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +14,9 @@ import java.util.List;
 
 @Repository
 public class userDao {
+
+	private final static Logger log = LoggerFactory.getLogger(userDao.class);
+
 	@Autowired
 	private SessionFactory sessionFactory;
 
@@ -29,7 +34,7 @@ public class userDao {
 	@Transactional
 	public User saveUser(User user) {
 		this.sessionFactory.getCurrentSession().saveOrUpdate(user);
-		System.out.println("User added" + user.getId());
+		log.info("User added" + user.getId());
 		return user;
 	}
 
