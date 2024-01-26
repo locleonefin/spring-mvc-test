@@ -92,5 +92,18 @@ public class Product {
 		this.description = description;
 	}
 
-
+	@Override
+	public String toString() {
+		return "Product{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", image='" + image + '\'' +
+				", category=" + category +
+				", quantity=" + quantity +
+				", price=" + price +
+				", weight=" + weight +
+				", description='" + description + '\'' +
+				", customer=" + customer +
+				'}';
+	}
 }

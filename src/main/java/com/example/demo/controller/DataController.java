@@ -35,6 +35,7 @@ public class DataController {
 
 	@PostMapping(value = "/buyProduct", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Product buyProduct(@RequestBody Product product) {
+		log.info("Product " + product);
 		return productService.addProduct(product);
 	}
 }
